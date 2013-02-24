@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" xmlns="http://www.w3.org/1999/html">
+<html>
+<head>
+    <title>image pre example</title>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="css/jquery.imgPre.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.imgPre.js"></script>
+</head>
+<body>
+<form class="form-horizontal">
+    <legend>图片预览插件测试</legend>
+    <div class="control-group">
+        <label class="control-label">图片预览:</label>
+
+        <div class="controls">
+            <div id="logoImage" class="imagePre" data-provides="imagePre">
+                <div class="thumbnail" style="width:160px;height:120px;">
+                    <img class="imagePreview" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                </div>
+                    <span class="btn btn-file"><span class="imagePre-new">选择图片</span><span
+                            class="imagePre-exists">修改</span>
+                    <input type="file" class="input-file"/></span>
+                <span data-dismiss="imagePre" class="btn imagePre-exists">删除</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">图片预览:</label>
+
+        <div class="controls">
+            <div id="coverImage" class="imagePre" data-provides="imagePre">
+                <div class="thumbnail" style="width:160px;height:120px;">
+                    <img class="imagePreview" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                </div>
+                    <span class="btn btn-file"><span class="imagePre-new">选择图片</span><span
+                            class="imagePre-exists">修改</span>
+                    <input type="file" class="input-file"/></span>
+                <span data-dismiss="imagePre" class="btn imagePre-exists">删除</span>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#logoImage').imagePre({'name':'logoImage','checkBoxName':'isLogoNull'});
+        $('#coverImage').imagePre({'name':'coverImage','checkBoxName':'isCoverNull'});
+    });
+</script>
